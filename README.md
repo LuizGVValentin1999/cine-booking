@@ -90,7 +90,7 @@ e transações no backend.
 * [x] Configurar Spring Boot
 * [x] Configurar MariaDB
 * [x] Criar entidades
-* [ ] Criar repositories
+* [x] Criar repositories
 * [ ] Criar DTOs
 * [ ] Criar mappers
 * [ ] Implementar services
