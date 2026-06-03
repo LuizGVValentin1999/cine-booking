@@ -1,3 +1,6 @@
+INSERT IGNORE INTO customers (id, name, email) VALUES
+  (1, 'Cliente Teste', 'cliente@teste.com');
+
 INSERT IGNORE INTO movies (id, name, duration_min) VALUES
   (1, 'Interestelar', 169),
   (2, 'Homem-Aranha: Através do Aranhaverso', 140),

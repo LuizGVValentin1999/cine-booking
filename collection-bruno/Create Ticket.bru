@@ -1,0 +1,24 @@
+meta {
+  name: Create Ticket
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/tickets
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "customerId": 1,
+    "sessionId": 1,
+    "seatId": 1
+  }
+}
+
+assert {
+  res.status: eq 201
+  res.body.status: eq PENDING
+}

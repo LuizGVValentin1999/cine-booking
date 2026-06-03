@@ -91,16 +91,16 @@ e transações no backend.
 * [x] Configurar MariaDB
 * [x] Criar entidades
 * [x] Criar repositories
-* [ ] Criar DTOs
-* [ ] Criar mappers
-* [ ] Implementar services
-* [ ] Implementar controllers
-* [ ] Implementar validações
+* [x] Criar DTOs
+* [x] Criar mappers
+* [x] Implementar services
+* [x] Implementar controllers
+* [x] Implementar validações
 * [ ] Implementar tratamento global de erros
-* [ ] Implementar reserva de assentos
-* [ ] Implementar cancelamento de reservas
+* [x] Implementar reserva de assentos
+* [x] Implementar cancelamento de reservas
 * [ ] Implementar scheduler de expiração
-* [ ] Criar seed inicial
+* [x] Criar seed inicial
 
 ### Frontend
 
