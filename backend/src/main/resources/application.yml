@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cine-booking
+
+  # ===== Datasource (MariaDB) =====
+  datasource:
+    url: jdbc:mariadb://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:cine_booking}
+    username: ${DB_USER:cine}
+    password: ${DB_PASSWORD:cine}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  # ===== JPA / Hibernate =====
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

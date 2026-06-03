@@ -1,0 +1,31 @@
+name: cine-booking
+
+services:
+  mariadb:
+    image: mariadb:11.4
+    container_name: cine-booking-mariadb
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: cine_booking
+      MARIADB_USER: cine
+      MARIADB_PASSWORD: cine
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - cine-booking
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mariadb_data:
+
+networks:
+  cine-booking:
+    name: cine-booking
+    driver: bridge
