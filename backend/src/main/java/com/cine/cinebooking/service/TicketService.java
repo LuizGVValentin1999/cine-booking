@@ -91,4 +91,13 @@ public class TicketService {
         ticket.setStatus(TicketStatus.CANCELLED);
         return ticketMapper.toResponse(ticketRepository.save(ticket));
     }
+
+    /**
+     * Marca como EXPIRED todas as reservas PENDING cujo prazo já passou,
+     * liberando os assentos. Acionado pelo scheduler.
+     */
+    @Transactional
+    public int expireOldReservations() {
+        return ticketRepository.expirePendingBefore(LocalDateTime.now());
+    }
 }

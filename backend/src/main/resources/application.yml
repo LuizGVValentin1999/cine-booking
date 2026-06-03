@@ -28,3 +28,7 @@ app:
   cors:
     # Lista separada por vírgula. Sobrescreva via env CORS_ALLOWED_ORIGINS.
     allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+  tickets:
+    expiration:
+      # Intervalo com que o scheduler expira reservas PENDING vencidas (duração: 10m, 30s, 1h...).
+      check-rate: 10m

@@ -96,10 +96,10 @@ e transações no backend.
 * [x] Implementar services
 * [x] Implementar controllers
 * [x] Implementar validações
-* [ ] Implementar tratamento global de erros
+* [x] Implementar tratamento global de erros
 * [x] Implementar reserva de assentos
 * [x] Implementar cancelamento de reservas
-* [ ] Implementar scheduler de expiração
+* [x] Implementar scheduler de expiração
 * [x] Criar seed inicial
 
 ### Frontend
